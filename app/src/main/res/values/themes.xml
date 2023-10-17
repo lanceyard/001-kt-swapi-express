@@ -2,8 +2,8 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.Swapiexpress" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <item name="colorPrimary">@color/red_day</item>
-        <item name="colorPrimaryVariant">@color/red_day</item>
+        <item name="colorPrimary">@color/blue_day</item>
+        <item name="colorPrimaryVariant">@color/blue_day</item>
 
         <item name="android:navigationBarColor">@color/gray_day</item>
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
