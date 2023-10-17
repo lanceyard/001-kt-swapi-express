@@ -1,5 +1,6 @@
 package com.sendabouquet.swapi_express
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
@@ -22,6 +23,17 @@ class MainActivity : AppCompatActivity() {
         // do something here
         binding.rVStar.adapter = StarAdapter(getStar())
         binding.rVStar.layoutManager = LinearLayoutManager(this)
+
+        binding.topAppBar.setOnMenuItemClickListener { menuItem ->
+            when(menuItem.itemId) {
+                R.id.about -> {
+                    val intent = Intent(this@MainActivity, AboutActivity::class.java)
+                    startActivity(intent)
+                    true
+                }
+                else -> false
+            }
+        }
     }
 
     fun getStar(): ArrayList<Star> {
