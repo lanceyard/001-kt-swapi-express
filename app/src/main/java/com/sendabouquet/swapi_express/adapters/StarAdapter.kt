@@ -27,7 +27,6 @@ class StarAdapter(private val listChar: ArrayList<Star>) :
         val b = holder.binding
         val star = listChar[position]
         b.imageView.load(star.photo) {
-            Log.d("COIL", star.photo)
             placeholder(R.drawable.loading_animation)
             error(R.drawable.ic_connection_error)
         }
