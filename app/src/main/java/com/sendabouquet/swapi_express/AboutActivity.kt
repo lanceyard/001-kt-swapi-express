@@ -13,7 +13,7 @@ class AboutActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        binding.profileImage.load("https://avatars.githubusercontent.com/u/12584890?v=4") {
+        binding.profileImage.load(R.drawable.raihan) {
             placeholder(R.drawable.loading_animation)
             error(R.drawable.ic_connection_error)
         }
