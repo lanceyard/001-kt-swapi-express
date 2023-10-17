@@ -1,5 +1,6 @@
 package com.sendabouquet.swapi_express
 
+import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -35,6 +36,19 @@ class DetailActivity : AppCompatActivity() {
         binding.ivStar.load(dataChar!!.photo) {
             placeholder(R.drawable.loading_animation)
             error(R.drawable.ic_connection_error)
+        }
+
+        binding.topAppBar.setOnMenuItemClickListener { menuItem ->
+            when(menuItem.itemId) {
+                R.id.action_share -> {
+                    val intent = Intent(Intent.ACTION_SEND)
+                    intent.setType("text/plain")
+                    intent.putExtra(Intent.EXTRA_TEXT, "do you like ${dataChar!!.title} bro? kalo suka sini aku kasi tau hehe")
+                    startActivity(Intent.createChooser(intent, "Share gan xixixi"))
+                    true
+                }
+                else -> false
+            }
         }
     }
 }

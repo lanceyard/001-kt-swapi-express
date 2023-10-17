@@ -54,4 +54,5 @@ dependencies {
 
     // additional
     implementation("androidx.core:core-splashscreen:1.0.0-beta02")
+    implementation("de.hdodenhof:circleimageview:3.1.0")
 }
